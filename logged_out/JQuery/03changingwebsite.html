@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>JQuery</title>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+
+<style type="text/css">
+
+	#circle {
+		width:100px;
+		height:100px;
+		border-radius:50%;
+		background-color:green;
+		float:left;
+		margin:10px;
+	}
+	
+</style>
+</head>
+<body>
+
+<div id="circle"></div>
+
+<p>This is some text</P>
+ 
+<iframe src="http://www.cnn.com"></iframe>
+
+ <script type="text/javascript">
+ 
+	$("#circle").hover(function(){
+		$("p").html("The content is changed");
+	});  
+	
+	$("iframe").attr("src","http://www.google.com");
+	
+ </script>
+ 
+</body>
+</html>
+    

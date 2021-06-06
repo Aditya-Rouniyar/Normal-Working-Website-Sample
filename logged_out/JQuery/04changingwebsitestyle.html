@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>JQuery</title>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+
+<style type="text/css">
+
+	#circle {
+		width:100px;
+		height:100px;
+		border-radius:50%;
+		background-color:green;
+		float:left;
+		margin:10px;
+	}
+	
+	.square {
+		width:100px;
+		height:100px;
+		background-color:red;
+		float:left;
+		margin:10px;
+	}
+	
+	#second {
+		 display:none;
+	}
+	
+	#third {
+		 display:none;
+	}
+	
+</style>
+</head>
+<body>
+
+<div id="circle"></div>
+<div class="square"></div>
+<div class="square"></div>
+ 
+ <p id="first">This is a paragraph</p>
+ <button id="click_fade">Click me</button>
+ 
+ <p id="second">This text was hidden initially</p>
+ <button id="click_fadein">Click me</button>
+ 
+ <p id="third">This is a toggle text</p>
+ <button id="toggle">Click me</button>
+ 
+ <script type="text/javascript">
+ 
+	$("div").click(function(){
+		$(this).fadeOut("slow");
+	});  
+	
+	$("#click_fade").click(function() {
+		$("#first").fadeOut("slow");
+	});
+	
+	$("#click_fadein").click(function() {
+		$("#second").fadeIn("slow");
+	});
+	
+	$("#toggle").click(function() {
+		if($("#third").css("display")=="none") {
+			$("#third").fadeIn("slow");
+		}
+		else {
+			$("#third").fadeOut("slow");
+		}
+	});
+	
+ </script>
+ 
+</body>
+</html>
